@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vending Machine</title>
+	<meta charset="utf-8" />
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+</head>
+<body>
+  <div class="arena">
+    <p><br /></p>
+    <div id="products1" class="productsContainer">
+      <div id="item1" class="productItem"><img src="./assets/img/product-tea1.png"><label class="productPrice">¥150</label><button id="itemButton1" class="productButton" onmouseover="vendingMachine.resetIdle()" onclick="vendingMachine.buy(this)"></button></div>
+      <div id="item2" class="productItem"><img src="./assets/img/product-tea2.png"><label class="productPrice">¥180</label><button id="itemButton2" class="productButton" onmouseover="vendingMachine.resetIdle()" onclick="vendingMachine.buy(this)"></button></div>
+      <div id="item3" class="productItem"><img src="./assets/img/product-tea3.png"><label class="productPrice">¥180</label><button id="itemButton3" class="productButton" onmouseover="vendingMachine.resetIdle()" onclick="vendingMachine.buy(this)"></button></div>
+      <div id="item4" class="productItem"><img src="./assets/img/product-tea4.png"><label class="productPrice">¥200</label><button id="itemButton4" class="productButton" onmouseover="vendingMachine.resetIdle()" onclick="vendingMachine.buy(this)"></button></div>
+      <div id="item5" class="productItem"><img src="./assets/img/product-tea5.png"><label class="productPrice">¥150</label><button id="itemButton5" class="productButton" onmouseover="vendingMachine.resetIdle()" onclick="vendingMachine.buy(this)"></button></div>
+    </div>
+    <div id="controls" class="controlContainer">
+      <div>
+        <div id="display2" class="display display-red">0</div>
+        <p><br /></p>
+        <div class="coins">
+          <label>Insert Coin:</label>
+          <div class="coin" onclick="vendingMachine.addCoin(500)" style="z-index: 130;">500</div>
+          <div class="coin" onclick="vendingMachine.addCoin(100)" style="z-index: 120;">100</div>
+          <div class="coin" onclick="vendingMachine.addCoin(50)"  style="z-index: 110;">50</div>
+          <div class="coin" onclick="vendingMachine.addCoin(10)"  style="z-index: 100;">10</div>
+        </div>
+      </div>
+      <div>
+        <div class="expel">
+          <button class="handle" onclick="vendingMachine.returnAll()">&nbsp;
+          </button>
+        </div>      
+      </div>
+      <div>
+        <div class="tray" id="tray1" onclick="vendingMachine.clearCoinReturn()">Coin Return<p></p><span id="trayCoins"></span></div>
+      </div>
+    </div>
+    <p><br /></p>
+  </div>
+  <div id="toast" class="toastHide">Thank you for your product purchase<p></p><img id="toastProduct" src="./assets/img/product-tea2.png"></div>
+  <p><br></p>
+  <div class="footer">
+    Project on <a href="https://github.com/msfwebdude/vendingMachine" target="_blank">GitHub</a>&nbsp;|&nbsp;
+    <a href="https://github.com/msfwebdude/vendingMachine" target="_blank">
+        <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/msfwebdude/vendingMachine?color=silver&style=plastic">
+    </a>
+    <a href="https://github.com/msfwebdude/vendingMachine/blob/master/LICENSE" target="_blank">
+        <img src="https://img.shields.io/github/license/msfwebdude/vendingMachine?color=silver&style=plastic" alt="GitHub">
+    </a>&nbsp;|&nbsp;
+    Updated:&nbsp;<span id="DateUpdated">{DateUpdated}</span>&nbsp;|&nbsp;
+    &copy;&nbsp;<span id="currentYear"></span>&nbsp;Mike&nbsp;Firoved
+  </div>
+  <script type="text/javascript" src="./assets/js/main.js"></script>
+</body>
+</html> 
